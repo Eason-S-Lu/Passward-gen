@@ -111,12 +111,12 @@ main ()
 	  cout << "Error:invalid input please try again.";
 	}
     }
-  cout << endl << "Start genrating......";
+  cout << endl << "Start genrating......"; << endl;
   if (reversable_int == 1)
     {
       string procress_string;
       procress_string = name + "-" + webside;
-      cout << endl << "debug:" << procress_string;
+      cout << "debug:" << procress_string;
 
     }
   else
@@ -126,10 +126,12 @@ main ()
 	  if (capitalized_int == 1)
 	    {
 	      //tt
+		  cout << "debug: specialcar=true, capitialized=ture" << endl ;
 	    }
 	  else
 	    {
 	      //tf
+		   cout << "debug: specialcar=true, capitialized=flase" << endl ;
 	    }
 	}
       else
@@ -137,10 +139,12 @@ main ()
 	  if (capitalized_int == 1)
 	    {
 	      //ft
+		   cout << "debug: specialcar=flase, capitialized=true" << endl ;
 	    }
 	  else
 	    {
 	      //ff
+		  cout << "debug: specialcar=flase, capitialized=false" << endl ;
 	    }
 	}
     }
