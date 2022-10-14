@@ -147,6 +147,14 @@ main ()
 	    {
 	      //tf
 		   cout << "debug: specialcar=true, capitialized=flase" << endl ;
+		    if ( passwardlength % 2 == 0){
+
+			}
+			else{
+				passwardlength-1;
+				string ch;
+				ch = 'a' + rand()%26;
+			}
 		    char cch;
     		string ch; 
     		unsigned seed= time(0);
