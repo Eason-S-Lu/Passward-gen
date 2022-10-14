@@ -7,7 +7,6 @@
 #include <stdexcept>
 
 using namespace std;
-
 int
 main ()
 {
@@ -23,195 +22,245 @@ main ()
   int reversable_int;
   //question
     cout << "Passward:>Welcome to the passward generater." << endl;
-  cout << "Passward:>Please type your name:";
-  cin >> name;
-  cout <<
-    "Passward:>Please type the webside you are going to craete a passward for:";
-  cin >> webside;
-  cout << "Passward:>Please type how long you want your passward:";
-  cin >> passwardlength;
-  while (true)
+    cout << "Passward:>Please type your name:";
+        cin >> name;
+    cout <<"Passward:>Please type the webside you are going to craete a passward for:";
+        cin >> webside;
+    cout << "Passward:>Please type how long you want your passward:";
+         cin >> passwardlength;
+/*
+while statement to detect t/f
+*/
+     while (true)
+        {
+            cout << "Passward:>Do you want to use CAPITALIZED letter? [yes/no]:";
+                cin >> capitalized;
+            if (capitalized == "yes")
+	            {
+	                capitalized_int = 1;
+	                cout << "Passward:>Imput accepted as yes. " << "Your imput is:" << capitalized;
+	                break;
+	            }
+                else if (capitalized == "no")
+	                {
+	                    capitalized_int = 0;
+	                    cout << "Passward:>Imput accepted as no. " << "Your imput is:" << capitalized;
+                        break;
+                    }
+                else
+	                {
+	                    cout << "Error:invalid input please try again.";
+	                }
+        }
+/*
+end while statement
+*/
+/*
+while statement to detect t/f
+*/
+        while (true)
+            {
+                cout << endl << "Passward:>Do you want special letters? [yes/no]:";
+                cin >> special;
+                    if (special == "yes")
+	                    {
+	                        special_int = 1;
+	                         cout << "Passward:>Imput accepted as yes. " << "Your imput is:" << special;
+	                        break;
+	                    }
+                    else if (special == "no")
+	                    {
+	                        special_int = 0;
+	                        cout << "Passward:>Imput accepted as no. " << "Your imput is:" << special;
+	                        break;
+	                    }
+                    else
+	                    {
+	                        cout << "Passward:>Error:invalid input please try again.";
+	                    }
+            }
+/*
+end while statement
+*/
+/*
+while statement to detect t/f
+*/
+        while (true)
+            {
+                cout << endl << "Passward:>Do you want reversable algeoism?" << endl << "Passward:>Warning:Choosing yes will ignore all settings." << endl << "Passward:>Yor input[yes/no]:";
+                    cin >> reversable;
+                if (reversable == "yes")
+	                {
+	                    reversable_int = 1;
+	                    cout << "Passward:>Imput accepted as yes. " << "Your imput is:" << reversable;
+	                    break;
+	                }
+                else if (reversable == "no")
+	                {
+	                    reversable_int = 0;
+	                    cout << "Passward:>Imput accepted as no. " << "Your imput is:" << reversable;
+	                     break;
+	                }
+                else
+	                {
+	                    cout << "Passward:>Error:invalid input please try again.";
+	                }
+            }
+/*
+-----------------------------------------------------------------------------------------------------
+question complete
+*/
+    cout << endl << "Passward:>Start genrating......" << endl;
+    if (reversable_int == 1)
     {
-      cout <<
-	"Passward:>Do you want to use CAPITALIZED letter? [yes/no]:";
-      cin >> capitalized;
-      if (capitalized == "yes")
-	{
-	  capitalized_int = 1;
-	  cout << "Passward:>Imput accepted as yes. " << "Your imput is:" <<
-	    capitalized;
-	  break;
-	}
-      //end if
-      else if (capitalized == "no")
-	{
-	  capitalized_int = 0;
-	  cout << "Passward:>Imput accepted as no. " << "Your imput is:" <<
-	    capitalized;
-	  break;
-	}
-      //end else if
-      else
-	{
-	  cout << "Error:invalid input please try again.";
-	}
-      //end else
-    }
-  //end while
-  while (true)
-    {
-      cout << endl << "Passward:>Do you want special letters? [yes/no]:";
-      cin >> special;
-      if (special == "yes")
-	{
-	  special_int = 1;
-	  cout << "Passward:>Imput accepted as yes. " << "Your imput is:" <<
-	    special;
-	  break;
-	}
-      //end if
-      else if (special == "no")
-	{
-	  special_int = 0;
-	  cout << "Passward:>Imput accepted as no. " << "Your imput is:" <<
-	    special;
-	  break;
-	}
-      //end else if
-      else
-	{
-	  cout << "Passward:>Error:invalid input please try again.";
-	}
-    }
-  //end else
-  //end while
-  while (true)
-    {
-      cout << endl << "Passward:>Do you want reversable algeoism?" << endl <<
-	"Passward:>Warning:Choosing yes will ignore all settings." << endl <<
-	"Passward:>Yor input[yes/no]:";
-      cin >> reversable;
-      if (reversable == "yes")
-	{
-	  reversable_int = 1;
-	  cout << "Passward:>Imput accepted as yes. " << "Your imput is:" <<
-	    reversable;
-	  break;
-	}
-      //end if
-      else if (reversable == "no")
-	{
-	  reversable_int = 0;
-	  cout << "Passward:>Imput accepted as no. " << "Your imput is:" <<
-	    reversable;
-	  break;
-	}
-      //end else if
-      else
-	{
-	  cout << "Passward:>Error:invalid input please try again.";
-	}
-    }
-  cout << endl << "Passward:>Start genrating......" << endl;
-  if (reversable_int == 1)
-    {
-      string procress_string;
-      procress_string = name + "-" + webside;
-      cout << "debug:" << procress_string;
-	  cout <<endl << "debug:eof=1";
-    }
-  else
-    {
-      if (special_int == 1)
-	{
-	  if (capitalized_int == 1)
-	    {
-	      //tt
-		  cout << "debug: specialcar=true, capitialized=ture" << endl ;
-		  char cch;
-    string ch; 
-    unsigned seed= time(0);
-    srand(seed);
-     for (int i = 1; i <= passwardlength/3 ; ++i) {
-    cch = 'a' + rand()%26;
-	 ch=ch + cch;
-	cch = '-' + rand()%4;
-	 ch=ch + cch;
-	cch = 'A' + rand()%26;
-    ch=ch + cch;
-    }
-    cout << endl << "Your passward is :" << ch <<endl;
-		   cout <<endl << "debug:eof=1";
-	    }
-	  else
-	    {
-	      //tf
-		   cout << "debug: specialcar=true, capitialized=flase" << endl ;
-		    if ( passwardlength % 2 == 0){
 
-			}
-			else{
-				passwardlength-1;
-				string ch;
-				ch = 'a' + rand()%26;
-			}
-		    char cch;
-    		string ch; 
-    		unsigned seed= time(0);
-    		srand(seed);
-    		 for (int i = 1; i <= passwardlength/2 ; ++i) {
-   			 cch = 'a' + rand()%26;
-	 		ch=ch + cch;
-			cch = '-' + rand()%4;
-    		ch=ch + cch;
-   			 }
-   		   cout << endl << "Your passward is :" << ch <<endl;
-		   cout <<endl << "debug:eof=1";
-	    }
-	}
-      else
-	{
-	  if (capitalized_int == 1)
-	    {
-	      //ft
-		   cout << "debug: specialcar=flase, capitialized=true" << endl ;
-		    if ( passwardlength % 2 == 0){
-
-			}
-			else{
-				passwardlength-1;
-				string ch;
-				ch = 'a' + rand()%26;
-			}
-		      char cch;
-    string ch; 
-    unsigned seed= time(0);
-    srand(seed);
-     for (int i = 1; i <= passwardlength/2 ; ++i) {
-    cch = 'a' + rand()%26;
-	 ch=ch + cch;
-	cch = 'A' + rand()%26;
-    ch=ch + cch;
     }
-    cout << endl << "Your passward is :" << ch <<endl;
-		  cout <<endl << "debug:eof=1";
-	    }
-	  else
-	    {
-	      //ff
-		  cout << "debug: specialcar=flase, capitialized=false" << endl ;
-		   char cch;
-    string ch; 
-    unsigned seed= time(0);
-    srand(seed);
-     for (int i = 1; i <= passwardlength; ++i) {
-    cch = 'a' + rand()%26;
-    ch=ch + cch;
-    }
-    cout << endl << "Your passward is :" << ch <<endl;
-		  cout <<endl << "debug:eof=1";
-	    }
-	}
-    }
-  return 0;
+    else
+    {
+         if (special_int == 1)
+         {
+            if (capitalized_int == 1)
+            {
+                //TT
+                cout << "debug: specialcar=true, capitialized=ture" << endl ;
+                if ( passwardlength % 3 == 0)
+                {
+                    char cch;
+                    string ch; 
+                    unsigned seed= time(0);
+                    srand(seed);
+                    for (int i = 1; i <= passwardlength/3 ; ++i) {
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+	                cch = '-' + rand()%4;
+	                ch=ch + cch;
+	                cch = 'A' + rand()%26;
+                    ch=ch + cch;
+                }
+                }
+                else 
+                {
+                    if (passwardlength % 3 == 1)
+                    {
+                    char cch;
+                    string ch; 
+                    unsigned seed= time(0);
+                    srand(seed);
+                    passwardlength - 1;
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+                    for (int i = 1; i <= passwardlength/3 ; ++i) {
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+	                cch = '-' + rand()%4;
+	                ch=ch + cch;
+	                cch = 'A' + rand()%26;
+                    ch=ch + cch;
+                    }
+                    }
+                    else 
+                    {
+                    char cch;
+                    string ch; 
+                    unsigned seed= time(0);
+                    srand(seed);
+                    passwardlength - 2;
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+                    cch = 'A' + rand()%26;
+                    ch=ch + cch;
+                    for (int i = 1; i <= passwardlength/3 ; ++i) {
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+	                cch = '-' + rand()%4;
+	                ch=ch + cch;
+	                cch = 'A' + rand()%26;
+                    ch=ch + cch;
+                    }
+                }
+            }
+            }
+            else
+            {
+                //TF
+                cout << "debug: specialcar=true, capitialized=flase" << endl ;
+                    if (passwardlength % 2 == 0)
+                    {
+                    char cch;
+                    string ch; 
+                    unsigned seed= time(0);
+                    srand(seed);
+                    for (int i = 1; i <= passwardlength/2 ; ++i) {
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+	                cch = '-' + rand()%4;
+	                ch=ch + cch;
+                    }
+                    }
+                    else 
+                    {
+                    char cch;
+                    string ch; 
+                    unsigned seed= time(0);
+                    srand(seed);
+                    passwardlength - 1;
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+                    for (int i = 1; i <= passwardlength/2 ; ++i) {
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+	                cch = '-' + rand()%4;
+	                ch=ch + cch;
+                    }
+                    }
+            }
+         }
+         else
+         {
+            if (capitalized_int == 1)
+            {
+               //FT
+               cout << "debug: specialcar=flase, capitialized=true" << endl ;
+                  if (passwardlength % 2 == 0)
+                    {
+                    char cch;
+                    string ch; 
+                    unsigned seed= time(0);
+                    srand(seed);
+                    for (int i = 1; i <= passwardlength/2 ; ++i) {
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+	                cch = 'A' + rand()%26;
+	                ch=ch + cch;
+                    }
+                    }
+                    else 
+                    {
+                    char cch;
+                    string ch; 
+                    unsigned seed= time(0);
+                    srand(seed);
+                    passwardlength - 1;
+                    cch = 'A' + rand()%26;
+	                ch=ch + cch;
+                    for (int i = 1; i <= passwardlength/2 ; ++i) {
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+	                cch = 'A' + rand()%26;
+	                ch=ch + cch;
+                    }
+                    }   
+            }
+            else 
+            {
+                //FF
+                cout << "debug: specialcar=flase, capitialized=false" << endl ;
+                 for (int i = 1; i <= passwardlength ; ++i) {
+                    cch = 'a' + rand()%26;
+	                ch=ch + cch;
+                    }
+            }
+            }
+         }
+    return 0;
 }
