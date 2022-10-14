@@ -113,7 +113,7 @@ main ()
 	  cout << "Error:invalid input please try again.";
 	}
     }
-  cout << endl << "Start genrating......"; << endl;
+  cout << endl << "Start genrating......" << endl;
   if (reversable_int == 1)
     {
       string procress_string;
