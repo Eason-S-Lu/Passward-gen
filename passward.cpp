@@ -35,11 +35,10 @@ main ()
       cout <<
 	"Passward:>Do you want to use CAPITALIZED letter? [yes/no]:";
       cin >> capitalized;
-      cout << endl;
       if (capitalized == "yes")
 	{
 	  capitalized_int = 1;
-	  cout << endl << "Imput accepted as yes. " << "Your imput is:" <<
+	  cout << "Imput accepted as yes. " << "Your imput is:" <<
 	    capitalized;
 	  break;
 	}
@@ -47,7 +46,7 @@ main ()
       else if (capitalized == "no")
 	{
 	  capitalized_int = 0;
-	  cout << endl << "Imput accepted as no. " << "Your imput is:" <<
+	  cout << "Imput accepted as no. " << "Your imput is:" <<
 	    capitalized;
 	  break;
 	}
@@ -66,7 +65,7 @@ main ()
       if (special == "yes")
 	{
 	  special_int = 1;
-	  cout << endl << "Imput accepted as yes. " << "Your imput is:" <<
+	  cout << "Imput accepted as yes. " << "Your imput is:" <<
 	    special;
 	  break;
 	}
@@ -74,7 +73,7 @@ main ()
       else if (special == "no")
 	{
 	  special_int = 0;
-	  cout << endl << "Imput accepted as no. " << "Your imput is:" <<
+	  cout << "Imput accepted as no. " << "Your imput is:" <<
 	    special;
 	  break;
 	}
@@ -95,7 +94,7 @@ main ()
       if (reversable == "yes")
 	{
 	  reversable_int = 1;
-	  cout << endl << "Imput accepted as yes. " << "Your imput is:" <<
+	  cout << "Imput accepted as yes. " << "Your imput is:" <<
 	    reversable;
 	  break;
 	}
@@ -103,7 +102,7 @@ main ()
       else if (reversable == "no")
 	{
 	  reversable_int = 0;
-	  cout << endl << "Imput accepted as no. " << "Your imput is:" <<
+	  cout << "Imput accepted as no. " << "Your imput is:" <<
 	    reversable;
 	  break;
 	}
