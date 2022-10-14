@@ -38,7 +38,7 @@ main ()
       if (capitalized == "yes")
 	{
 	  capitalized_int = 1;
-	  cout << "Imput accepted as yes. " << "Your imput is:" <<
+	  cout << "Passward:>Imput accepted as yes. " << "Your imput is:" <<
 	    capitalized;
 	  break;
 	}
@@ -46,7 +46,7 @@ main ()
       else if (capitalized == "no")
 	{
 	  capitalized_int = 0;
-	  cout << "Imput accepted as no. " << "Your imput is:" <<
+	  cout << "Passward:>Imput accepted as no. " << "Your imput is:" <<
 	    capitalized;
 	  break;
 	}
