@@ -148,7 +148,7 @@ question complete
                     string ch; 
                     unsigned seed= time(0);
                     srand(seed);
-                    passwardlength-1;
+                    passwardlength=passwardlength-1;
                     cch = 'a' + rand()%26;
 	                ch=ch+cch;
                     for (int i = 1; i <= passwardlength/3 ; ++i) {
@@ -168,7 +168,7 @@ question complete
                     string ch; 
                     unsigned seed= time(0);
                     srand(seed);
-                    passwardlength-2;
+                     passwardlength=passwardlength-2;
                     cch = 'a' + rand()%26;
 	                ch=ch + cch;
                     cch = 'A' + rand()%26;
@@ -211,7 +211,7 @@ question complete
                     string ch; 
                     unsigned seed= time(0);
                     srand(seed);
-                    passwardlength-1;
+                     passwardlength=passwardlength-1;
                     cch = 'a' + rand()%26;
 	                ch=ch + cch;
                     for (int i = 1; i <= passwardlength/2 ; ++i) {
@@ -252,7 +252,7 @@ question complete
                     string ch; 
                     unsigned seed= time(0);
                     srand(seed);
-                    passwardlength-1;
+                     passwardlength=passwardlength-1;
                     cch = 'A' + rand()%26;
 	                ch=ch + cch;
                     for (int i = 1; i <= passwardlength/2 ; ++i) {
