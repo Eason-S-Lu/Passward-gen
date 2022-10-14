@@ -118,7 +118,7 @@ main ()
       string procress_string;
       procress_string = name + "-" + webside;
       cout << "debug:" << procress_string;
-
+	  cout <<endl << "debug:eof=1";
     }
   else
     {
@@ -128,11 +128,14 @@ main ()
 	    {
 	      //tt
 		  cout << "debug: specialcar=true, capitialized=ture" << endl ;
+	 	  cout <<endl << "debug:eof=1";
+
 	    }
 	  else
 	    {
 	      //tf
 		   cout << "debug: specialcar=true, capitialized=flase" << endl ;
+		   cout <<endl << "debug:eof=1";
 	    }
 	}
       else
@@ -141,11 +144,13 @@ main ()
 	    {
 	      //ft
 		   cout << "debug: specialcar=flase, capitialized=true" << endl ;
+		   cout <<endl << "debug:eof=1";
 	    }
 	  else
 	    {
 	      //ff
 		  cout << "debug: specialcar=flase, capitialized=false" << endl ;
+		  cout <<endl << "debug:eof=1";
 	    }
 	}
     }
