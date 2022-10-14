@@ -150,6 +150,15 @@ main ()
 	    {
 	      //ff
 		  cout << "debug: specialcar=flase, capitialized=false" << endl ;
+		   char cch;
+    string ch; 
+    unsigned seed= time(0);
+    srand(seed);
+     for (int i = 1; i <= passwardlength; ++i) {
+    cch = 'a' + rand()%26;
+    ch=ch + cch;
+    }
+    cout << endl << "Your passward is :" << ch <<endl;
 		  cout <<endl << "debug:eof=1";
 	    }
 	}
