@@ -138,7 +138,7 @@ question complete
                     ch=ch+cch;
                 }
                 cout << endl << "Your passward is :" << ch << endl ;
-                    cout << endl << "Debug:eof=1";
+                    cout << endl << "Debug:EOF=1";
                 }
                 else 
                 {
@@ -160,7 +160,7 @@ question complete
                     ch=ch+cch;
                     }
                    cout << endl << "Your passward is :" << ch << endl ;
-                    cout << endl << "Debug:eof=1";
+                    cout << endl << "Debug:EOF=1";
                     }
                     else 
                     {
@@ -182,7 +182,7 @@ question complete
                     ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
-                    cout << endl << "Debug:eof=1";
+                    cout << endl << "Debug:EOF=1";
                 }
             }
             }
@@ -203,7 +203,7 @@ question complete
 	                ch=ch + cch;
                     }
                    cout << endl << "Your passward is :" << ch << endl ;
-                    cout << endl << "Debug:eof=1";
+                    cout << endl << "Debug:EOF=1";
                     }
                     else 
                     {
@@ -221,7 +221,7 @@ question complete
 	                ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
-                    cout << endl << "Debug:eof=1";
+                    cout << endl << "Debug:EOF=1";
                     }
             }
          }
@@ -244,7 +244,7 @@ question complete
 	                ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
-                    cout << endl << "Debug:eof=1";
+                    cout << endl << "Debug:EOF=1";
                     }
                     else 
                     {
@@ -262,7 +262,7 @@ question complete
 	                ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
-                    cout << endl << "Debug:eof=1";
+                    cout << endl << "Debug:EOF=1";
                     }   
             }
             else 
@@ -276,7 +276,7 @@ question complete
 	                ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
-                    cout << endl << "Debug:eof=1";
+                    cout << endl << "Debug:EOF=1";
             }
             }
          }
