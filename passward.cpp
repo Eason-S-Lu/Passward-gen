@@ -148,16 +148,16 @@ main ()
 	      //tf
 		   cout << "debug: specialcar=true, capitialized=flase" << endl ;
 		    char cch;
-    string ch; 
-    unsigned seed= time(0);
-    srand(seed);
-     for (int i = 1; i <= passwardlength/2 ; ++i) {
-    cch = 'a' + rand()%26;
-	 ch=ch + cch;
-	cch = '-' + rand()%4;
-    ch=ch + cch;
-    }
-    cout << endl << "Your passward is :" << ch <<endl;
+    		string ch; 
+    		unsigned seed= time(0);
+    		srand(seed);
+    		 for (int i = 1; i <= passwardlength/2 ; ++i) {
+   			 cch = 'a' + rand()%26;
+	 		ch=ch + cch;
+			cch = '-' + rand()%4;
+    		ch=ch + cch;
+   			 }
+   		   cout << endl << "Your passward is :" << ch <<endl;
 		   cout <<endl << "debug:eof=1";
 	    }
 	}
