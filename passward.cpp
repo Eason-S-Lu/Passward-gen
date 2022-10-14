@@ -65,7 +65,7 @@ main ()
       if (special == "yes")
 	{
 	  special_int = 1;
-	  cout << "Imput accepted as yes. " << "Your imput is:" <<
+	  cout << "Passward:>Imput accepted as yes. " << "Your imput is:" <<
 	    special;
 	  break;
 	}
@@ -73,28 +73,28 @@ main ()
       else if (special == "no")
 	{
 	  special_int = 0;
-	  cout << "Imput accepted as no. " << "Your imput is:" <<
+	  cout << "Passward:>Imput accepted as no. " << "Your imput is:" <<
 	    special;
 	  break;
 	}
       //end else if
       else
 	{
-	  cout << "Error:invalid input please try again.";
+	  cout << "Passward:>Error:invalid input please try again.";
 	}
     }
   //end else
   //end while
   while (true)
     {
-      cout << endl << "Do you want reversable algeoism?" << endl <<
-	"Warning:Choosing yes will ignore all settings." << endl <<
-	"Yor input[yes/no]:";
+      cout << endl << "Passward:>Do you want reversable algeoism?" << endl <<
+	"Passward:>Warning:Choosing yes will ignore all settings." << endl <<
+	"Passward:>Yor input[yes/no]:";
       cin >> reversable;
       if (reversable == "yes")
 	{
 	  reversable_int = 1;
-	  cout << "Imput accepted as yes. " << "Your imput is:" <<
+	  cout << "Passward:>Imput accepted as yes. " << "Your imput is:" <<
 	    reversable;
 	  break;
 	}
@@ -102,17 +102,17 @@ main ()
       else if (reversable == "no")
 	{
 	  reversable_int = 0;
-	  cout << "Imput accepted as no. " << "Your imput is:" <<
+	  cout << "Passward:>Imput accepted as no. " << "Your imput is:" <<
 	    reversable;
 	  break;
 	}
       //end else if
       else
 	{
-	  cout << "Error:invalid input please try again.";
+	  cout << "Passward:>Error:invalid input please try again.";
 	}
     }
-  cout << endl << "Start genrating......" << endl;
+  cout << endl << "Passward:>Start genrating......" << endl;
   if (reversable_int == 1)
     {
       string procress_string;
