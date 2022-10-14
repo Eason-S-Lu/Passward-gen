@@ -131,12 +131,13 @@ question complete
                     srand(seed);
                     for (int i = 1; i <= passwardlength/3 ; ++i) {
                     cch = 'a' + rand()%26;
-	                ch=ch + cch;
+	                ch=ch+cch;
 	                cch = '-' + rand()%4;
-	                ch=ch + cch;
+	                ch=ch+cch;
 	                cch = 'A' + rand()%26;
-                    ch=ch + cch;
+                    ch=ch+cch;
                 }
+                cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
                 }
                 else 
                 {
@@ -146,17 +147,18 @@ question complete
                     string ch; 
                     unsigned seed= time(0);
                     srand(seed);
-                    passwardlength - 1;
+                    passwardlength-1;
                     cch = 'a' + rand()%26;
-	                ch=ch + cch;
+	                ch=ch+cch;
                     for (int i = 1; i <= passwardlength/3 ; ++i) {
                     cch = 'a' + rand()%26;
-	                ch=ch + cch;
+	                ch=ch+cch;
 	                cch = '-' + rand()%4;
-	                ch=ch + cch;
+	                ch=ch+cch;
 	                cch = 'A' + rand()%26;
-                    ch=ch + cch;
+                    ch=ch+cch;
                     }
+                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
                     }
                     else 
                     {
@@ -164,7 +166,7 @@ question complete
                     string ch; 
                     unsigned seed= time(0);
                     srand(seed);
-                    passwardlength - 2;
+                    passwardlength-2;
                     cch = 'a' + rand()%26;
 	                ch=ch + cch;
                     cch = 'A' + rand()%26;
@@ -177,6 +179,7 @@ question complete
 	                cch = 'A' + rand()%26;
                     ch=ch + cch;
                     }
+                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
                 }
             }
             }
@@ -196,6 +199,7 @@ question complete
 	                cch = '-' + rand()%4;
 	                ch=ch + cch;
                     }
+                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
                     }
                     else 
                     {
@@ -203,7 +207,7 @@ question complete
                     string ch; 
                     unsigned seed= time(0);
                     srand(seed);
-                    passwardlength - 1;
+                    passwardlength-1;
                     cch = 'a' + rand()%26;
 	                ch=ch + cch;
                     for (int i = 1; i <= passwardlength/2 ; ++i) {
@@ -212,6 +216,7 @@ question complete
 	                cch = '-' + rand()%4;
 	                ch=ch + cch;
                     }
+                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
                     }
             }
          }
@@ -233,6 +238,7 @@ question complete
 	                cch = 'A' + rand()%26;
 	                ch=ch + cch;
                     }
+                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
                     }
                     else 
                     {
@@ -240,7 +246,7 @@ question complete
                     string ch; 
                     unsigned seed= time(0);
                     srand(seed);
-                    passwardlength - 1;
+                    passwardlength-1;
                     cch = 'A' + rand()%26;
 	                ch=ch + cch;
                     for (int i = 1; i <= passwardlength/2 ; ++i) {
@@ -249,16 +255,20 @@ question complete
 	                cch = 'A' + rand()%26;
 	                ch=ch + cch;
                     }
+                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
                     }   
             }
             else 
             {
                 //FF
                 cout << "debug: specialcar=flase, capitialized=false" << endl ;
+                char cch;
+                string ch;
                  for (int i = 1; i <= passwardlength ; ++i) {
                     cch = 'a' + rand()%26;
 	                ch=ch + cch;
                     }
+                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
             }
             }
          }
