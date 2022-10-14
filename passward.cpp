@@ -25,14 +25,14 @@ main ()
     cout << "Passward:>Welcome to the passward generater." << endl;
   cout << "Passward:>Please type your name:";
   cin >> name;
-  cout << endl <<
+  cout <<
     "Passward:>Please type the webside you are going to craete a passward for:";
   cin >> webside;
-  cout << endl << "Passward:>Please type how long you want your passward:";
+  cout << "Passward:>Please type how long you want your passward:";
   cin >> passwardlength;
   while (true)
     {
-      cout << endl <<
+      cout <<
 	"Passward:>Do you want to use CAPITALIZED letter? [yes/no]:";
       cin >> capitalized;
       cout << endl;
