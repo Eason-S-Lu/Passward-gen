@@ -137,7 +137,8 @@ question complete
 	                cch = 'A' + rand()%26;
                     ch=ch+cch;
                 }
-                cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
+                cout << endl << "Your passward is :" << ch << endl ;
+                    cout << endl << "Debug:eof=1";
                 }
                 else 
                 {
@@ -158,7 +159,8 @@ question complete
 	                cch = 'A' + rand()%26;
                     ch=ch+cch;
                     }
-                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
+                   cout << endl << "Your passward is :" << ch << endl ;
+                    cout << endl << "Debug:eof=1";
                     }
                     else 
                     {
@@ -179,7 +181,8 @@ question complete
 	                cch = 'A' + rand()%26;
                     ch=ch + cch;
                     }
-                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
+                    cout << endl << "Your passward is :" << ch << endl ;
+                    cout << endl << "Debug:eof=1";
                 }
             }
             }
@@ -199,7 +202,8 @@ question complete
 	                cch = '-' + rand()%4;
 	                ch=ch + cch;
                     }
-                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
+                   cout << endl << "Your passward is :" << ch << endl ;
+                    cout << endl << "Debug:eof=1";
                     }
                     else 
                     {
@@ -216,7 +220,8 @@ question complete
 	                cch = '-' + rand()%4;
 	                ch=ch + cch;
                     }
-                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
+                    cout << endl << "Your passward is :" << ch << endl ;
+                    cout << endl << "Debug:eof=1";
                     }
             }
          }
@@ -238,7 +243,8 @@ question complete
 	                cch = 'A' + rand()%26;
 	                ch=ch + cch;
                     }
-                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
+                    cout << endl << "Your passward is :" << ch << endl ;
+                    cout << endl << "Debug:eof=1";
                     }
                     else 
                     {
@@ -255,7 +261,8 @@ question complete
 	                cch = 'A' + rand()%26;
 	                ch=ch + cch;
                     }
-                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
+                    cout << endl << "Your passward is :" << ch << endl ;
+                    cout << endl << "Debug:eof=1";
                     }   
             }
             else 
@@ -268,7 +275,8 @@ question complete
                     cch = 'a' + rand()%26;
 	                ch=ch + cch;
                     }
-                    cout << endl << "Your passward is :" << ch << endl << "Debug:eof=1";
+                    cout << endl << "Your passward is :" << ch << endl ;
+                    cout << endl << "Debug:eof=1";
             }
             }
          }
