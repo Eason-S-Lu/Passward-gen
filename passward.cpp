@@ -3,6 +3,8 @@
 #include <list>
 #include <string>
 #include <locale>
+#include <algorithm>
+#include <stdexcept>
 
 using namespace std;
 
