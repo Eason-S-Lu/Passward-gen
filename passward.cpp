@@ -114,7 +114,11 @@ question complete
     cout << endl << "Passward:>Start genrating......" << endl;
     if (reversable_int == 1)
     {
-
+        /*
+        working in progress WIP
+        */
+        char ztx [64];
+        ztx [64] = {}
     }
     else
     {
