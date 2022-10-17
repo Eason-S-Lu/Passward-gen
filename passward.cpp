@@ -168,7 +168,7 @@ while statement to detect t/f
                     cin >> reversable;
                 if (reversable == "yes")
 	                {
-	                    reversable_int = 0;
+	                    reversable_int = 1;
                         //set it to one when algerism is complete.
 	                    cout << "Passward:>Imput accepted as yes. " << "Your imput is:" << reversable;
 	                    break;
