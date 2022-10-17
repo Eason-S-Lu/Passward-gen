@@ -191,6 +191,7 @@ question complete
     cout << endl << "Passward:>Start genrating......" << endl;
     if (reversable_int == 1)
     {
+        
    	char input_str[] = "MENON";
 	int len_str;
 
