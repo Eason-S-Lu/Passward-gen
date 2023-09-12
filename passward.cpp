@@ -257,7 +257,6 @@ int main()
                         ch = ch + cch;
                         for (int i = 1; i <= passwardlength / 3; ++i)
                         {
-
                             cch = 'a' + distribution_26(gen);
                             ch = ch + cch;
                             cch = '-' + distribution_3(gen);
