@@ -5,6 +5,7 @@
 #include <locale>
 #include <algorithm>
 #include <stdexcept>
+#include <random>
 using namespace std;
 #define SIZE 1000
 
@@ -68,6 +69,8 @@ char *base64Encoder(char input_str[], int len_str)
 }
 int main()
 {
+    random_device rd;
+    mt19937 gen(rd());
     // init var(s).
     string name;
     string webside;
@@ -208,17 +211,20 @@ int main()
                     srand(seed);
                     for (int i = 1; i <= passwardlength / 3; ++i)
                     {
-                        cch = 'a' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'a' + distribution(gen);
                         ch = ch + cch;
-                        cch = '-' + rand() % 4;
+                        uniform_int_distribution<int> distribution(0, 3);
+                        cch = '-' + distribution(gen);
                         ch = ch + cch;
-                        cch = 'A' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'A' + distribution(gen);
                         ch = ch + cch;
                     }
                     cout << endl
                          << "Your passward is :" << ch << endl;
                     cout << endl
-                         << "Debug:EOF=1";
+                         << "Debug:EOF=1" << endl;
                 }
                 else
                 {
@@ -233,17 +239,20 @@ int main()
                         ch = ch + cch;
                         for (int i = 1; i <= passwardlength / 3; ++i)
                         {
-                            cch = 'a' + rand() % 26;
+                            uniform_int_distribution<int> distribution(0, 25);
+                            cch = 'a' + distribution(gen);
                             ch = ch + cch;
-                            cch = '-' + rand() % 4;
+                            uniform_int_distribution<int> distribution(0, 3);
+                            cch = '-' + distribution(gen);
                             ch = ch + cch;
-                            cch = 'A' + rand() % 26;
+                            uniform_int_distribution<int> distribution(0, 25);
+                            cch = 'A' + distribution(gen);
                             ch = ch + cch;
                         }
                         cout << endl
                              << "Your passward is :" << ch << endl;
                         cout << endl
-                             << "Debug:EOF=1";
+                             << "Debug:EOF=1" << endl;
                     }
                     else
                     {
@@ -252,23 +261,28 @@ int main()
                         unsigned seed = time(0);
                         srand(seed);
                         passwardlength = passwardlength - 2;
-                        cch = 'a' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'a' + distribution(gen);
                         ch = ch + cch;
-                        cch = 'A' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'A' + distribution(gen);
                         ch = ch + cch;
                         for (int i = 1; i <= passwardlength / 3; ++i)
                         {
-                            cch = 'a' + rand() % 26;
+                            uniform_int_distribution<int> distribution(0, 25);
+                            cch = 'a' + distribution(gen);
                             ch = ch + cch;
-                            cch = '-' + rand() % 4;
+                            uniform_int_distribution<int> distribution(0, 3);
+                            cch = '-' + distribution(gen);
                             ch = ch + cch;
-                            cch = 'A' + rand() % 26;
+                            uniform_int_distribution<int> distribution(0, 25);
+                            cch = 'A' + distribution(gen);
                             ch = ch + cch;
                         }
                         cout << endl
                              << "Your passward is :" << ch << endl;
                         cout << endl
-                             << "Debug:EOF=1";
+                             << "Debug:EOF=1" << endl;
                     }
                 }
             }
@@ -284,15 +298,17 @@ int main()
                     srand(seed);
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-                        cch = 'a' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'a' + distribution(gen);
                         ch = ch + cch;
-                        cch = '-' + rand() % 4;
+                        uniform_int_distribution<int> distribution(0, 3);
+                        cch = '-' + distribution(gen);
                         ch = ch + cch;
                     }
                     cout << endl
                          << "Your passward is :" << ch << endl;
                     cout << endl
-                         << "Debug:EOF=1";
+                         << "Debug:EOF=1" << endl;
                 }
                 else
                 {
@@ -301,19 +317,22 @@ int main()
                     unsigned seed = time(0);
                     srand(seed);
                     passwardlength = passwardlength - 1;
-                    cch = 'a' + rand() % 26;
+                    uniform_int_distribution<int> distribution(0, 25);
+                    cch = 'a' + distribution(gen);
                     ch = ch + cch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-                        cch = 'a' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'a' + distribution(gen);
                         ch = ch + cch;
-                        cch = '-' + rand() % 4;
+                        uniform_int_distribution<int> distribution(0, 3);
+                        cch = '-' + distribution(gen);
                         ch = ch + cch;
                     }
                     cout << endl
                          << "Your passward is :" << ch << endl;
                     cout << endl
-                         << "Debug:EOF=1";
+                         << "Debug:EOF=1" << endl;
                 }
             }
         }
@@ -331,15 +350,17 @@ int main()
                     srand(seed);
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-                        cch = 'a' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'a' + distribution(gen);
                         ch = ch + cch;
-                        cch = 'A' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'A' + distribution(gen);
                         ch = ch + cch;
                     }
                     cout << endl
                          << "Your passward is :" << ch << endl;
                     cout << endl
-                         << "Debug:EOF=1";
+                         << "Debug:EOF=1" << endl;
                 }
                 else
                 {
@@ -348,19 +369,22 @@ int main()
                     unsigned seed = time(0);
                     srand(seed);
                     passwardlength = passwardlength - 1;
-                    cch = 'A' + rand() % 26;
+                    uniform_int_distribution<int> distribution(0, 25);
+                    cch = 'A' + distribution(gen);
                     ch = ch + cch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-                        cch = 'a' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'a' + distribution(gen);
                         ch = ch + cch;
-                        cch = 'A' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'A' + distribution(gen);
                         ch = ch + cch;
                     }
                     cout << endl
                          << "Your passward is :" << ch << endl;
                     cout << endl
-                         << "Debug:EOF=1";
+                         << "Debug:EOF=1" << endl;
                 }
             }
             else
@@ -371,7 +395,8 @@ int main()
                 string ch;
                 for (int i = 1; i <= passwardlength; ++i)
                 {
-                    cch = 'a' + rand() % 26;
+                    uniform_int_distribution<int> distribution(0, 25);
+                    cch = 'a' + distribution(gen);
                     ch = ch + cch;
                 }
                 cout << endl
