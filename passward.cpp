@@ -12,10 +12,8 @@ using namespace std;
 // and its length and returns encoded string
 char* base64Encoder(char input_str[], int len_str)
 {
-
 	// Character set of base64 encoding scheme
 	char char_set[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-	
 	// Resultant string
 	char *res_str = (char *) malloc(SIZE * sizeof(char));
 	
@@ -39,9 +37,7 @@ char* base64Encoder(char input_str[], int len_str)
 				// calculates how many time loop
 				// ran if "MEN" -> 3 otherwise "ON" -> 2
 				count++;
-			
 			}
-
 			no_of_bits = count * 8;
 
 			// calculates how many "=" to append after res_str.
@@ -81,7 +77,6 @@ char* base64Encoder(char input_str[], int len_str)
 	res_str[k] = '\0';
 
 	return res_str;
-
 }
 
 int
@@ -190,8 +185,7 @@ question complete
 */
     cout << endl << "Passward:>Start genrating......" << endl;
     if (reversable_int == 1)
-    {
-        
+    { 
    	char input_str[] = "MENON";
 	int len_str;
 
