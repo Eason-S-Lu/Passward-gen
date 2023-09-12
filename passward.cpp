@@ -207,8 +207,6 @@ int main()
                 {
                     char cch;
                     string ch;
-                    unsigned seed = time(0);
-                    srand(seed);
                     for (int i = 1; i <= passwardlength / 3; ++i)
                     {
                         uniform_int_distribution<int> distribution(0, 25);
@@ -232,8 +230,6 @@ int main()
                     {
                         char cch;
                         string ch;
-                        unsigned seed = time(0);
-                        srand(seed);
                         passwardlength = passwardlength - 1;
                         uniform_int_distribution<int> distribution(0, 25);
                         cch = 'a' + distribution(gen);
@@ -259,8 +255,6 @@ int main()
                     {
                         char cch;
                         string ch;
-                        unsigned seed = time(0);
-                        srand(seed);
                         passwardlength = passwardlength - 2;
                         uniform_int_distribution<int> distribution(0, 25);
                         cch = 'a' + distribution(gen);
@@ -295,8 +289,6 @@ int main()
                 {
                     char cch;
                     string ch;
-                    unsigned seed = time(0);
-                    srand(seed);
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
                         uniform_int_distribution<int> distribution(0, 25);
@@ -315,8 +307,6 @@ int main()
                 {
                     char cch;
                     string ch;
-                    unsigned seed = time(0);
-                    srand(seed);
                     passwardlength = passwardlength - 1;
                     uniform_int_distribution<int> distribution(0, 25);
                     cch = 'a' + distribution(gen);
@@ -347,8 +337,6 @@ int main()
                 {
                     char cch;
                     string ch;
-                    unsigned seed = time(0);
-                    srand(seed);
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
                         uniform_int_distribution<int> distribution(0, 25);
@@ -367,8 +355,6 @@ int main()
                 {
                     char cch;
                     string ch;
-                    unsigned seed = time(0);
-                    srand(seed);
                     passwardlength = passwardlength - 1;
                     uniform_int_distribution<int> distribution(0, 25);
                     cch = 'A' + distribution(gen);
