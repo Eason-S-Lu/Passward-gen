@@ -162,16 +162,16 @@ int main()
         cin >> reversable;
         if (reversable == "yes")
         {
-            reversable_int = 0;
+            reversable_int = 1;
             // set it to one when algerism is complete.
-            cout << "Passward:>Imput accepted as yes. "
+            cout << "Passward:>Imput accepted as yes."
                  << "Your imput is:" << reversable;
             break;
         }
         else if (reversable == "no")
         {
             reversable_int = 0;
-            cout << "Passward:>Imput accepted as no. "
+            cout << "Passward:>Imput accepted as no."
                  << "Your imput is:" << reversable;
             break;
         }
@@ -238,7 +238,6 @@ int main()
                             ch = ch + cch;
                             cch = '-' + distribution_3(gen);
                             ch = ch + cch;
-
                             cch = 'A' + distribution_26(gen);
                             ch = ch + cch;
                         }
@@ -252,10 +251,8 @@ int main()
                         char cch;
                         string ch;
                         passwardlength = passwardlength - 2;
-
                         cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-
                         cch = 'A' + distribution_26(gen);
                         ch = ch + cch;
                         for (int i = 1; i <= passwardlength / 3; ++i)
@@ -263,10 +260,8 @@ int main()
 
                             cch = 'a' + distribution_26(gen);
                             ch = ch + cch;
-
                             cch = '-' + distribution_3(gen);
                             ch = ch + cch;
-
                             cch = 'A' + distribution_26(gen);
                             ch = ch + cch;
                         }
@@ -287,10 +282,8 @@ int main()
                     string ch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-
                         cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-
                         cch = '-' + distribution_3(gen);
                         ch = ch + cch;
                     }
@@ -304,15 +297,12 @@ int main()
                     char cch;
                     string ch;
                     passwardlength = passwardlength - 1;
-
                     cch = 'a' + distribution_26(gen);
                     ch = ch + cch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-
                         cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-
                         cch = '-' + distribution_3(gen);
                         ch = ch + cch;
                     }
@@ -335,10 +325,8 @@ int main()
                     string ch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-
                         cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-
                         cch = 'A' + distribution_26(gen);
                         ch = ch + cch;
                     }
@@ -352,15 +340,12 @@ int main()
                     char cch;
                     string ch;
                     passwardlength = passwardlength - 1;
-
                     cch = 'A' + distribution_26(gen);
                     ch = ch + cch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-
                         cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-
                         cch = 'A' + distribution_26(gen);
                         ch = ch + cch;
                     }
@@ -378,7 +363,6 @@ int main()
                 string ch;
                 for (int i = 1; i <= passwardlength; ++i)
                 {
-
                     cch = 'a' + distribution_26(gen);
                     ch = ch + cch;
                 }
