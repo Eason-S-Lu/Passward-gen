@@ -235,7 +235,8 @@ int main()
                         unsigned seed = time(0);
                         srand(seed);
                         passwardlength = passwardlength - 1;
-                        cch = 'a' + rand() % 26;
+                        uniform_int_distribution<int> distribution(0, 25);
+                        cch = 'a' + distribution(gen);
                         ch = ch + cch;
                         for (int i = 1; i <= passwardlength / 3; ++i)
                         {
