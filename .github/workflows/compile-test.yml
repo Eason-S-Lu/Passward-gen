@@ -25,16 +25,24 @@ jobs:
           sudo apt install -y llvm
           
       - name: Compile C++ code (C++14)
-        run: g++ -std=c++14 -Wall -Wextra -Werror -pedantic -c password.cpp
+        run: |
+          g++ -std=c++14 -Wall -Wextra -Werror -pedantic -c password.cpp -o gcc14
+          clang++ -std=c++14 -Wall -Wextra -Werror -pedantic -c password.cpp -o clang14
         
       - name: Compile C++ code (C++17)
-        run: g++ -std=c++17 -Wall -Wextra -Werror -pedantic -c password.cpp
+        run: |
+          g++ -std=c++17 -Wall -Wextra -Werror -pedantic -c password.cpp -o gcc17
+          clang++ -std=c++17 -Wall -Wextra -Werror -pedantic -c password.cpp -o clang17
         
       - name: Compile C++ code (C++20)
-        run: g++ -std=c++20 -Wall -Wextra -Werror -pedantic -c password.cpp
+        run: |
+          g++ -std=c++20 -Wall -Wextra -Werror -pedantic -c password.cpp -o gcc20
+          clang++ -std=c++20 -Wall -Wextra -Werror -pedantic -c password.cpp -o clang20
         
       - name: Compile C++ code (C++23)
-        run: g++ -std=c++23 -Wall -Wextra -Werror -pedantic -c password.cpp
+        run: |
+          g++ -std=c++23 -Wall -Wextra -Werror -pedantic -c password.cpp -o gcc23
+          clang++ -std=c++23 -Wall -Wextra -Werror -pedantic -c password.cpp -o clang23
         
       - name: Upload build artifact
         if: success()
