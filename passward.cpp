@@ -1,104 +1,62 @@
 #include <iostream>
-#include <iterator>
-#include <list>
+#include <cstring>
 #include <string>
-#include <locale>
-#include <algorithm>
-#include <stdexcept>
 #include <random>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 using namespace std;
 
-char *safeStrcat(const char *s1, const char *s2)
-{
+char *safeStrcat(const char *s1, const char *s2){
     char *result = (char *)malloc(strlen(s1) + strlen(s2) + 1);
-    if (result == NULL)
-    {
+    if (result == NULL){
         return NULL;
     }
     strcpy(result, s1);
     strcat(result, s2);
     return result;
 }
-
-// Takes string to be encoded as input
-// and its length and returns encoded string
 static const char char_set[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-
-char *base64Encoder(const char input_str[], int len_str)
-{
-    // Resultant string
+char *base64Encoder(const char input_str[], int len_str){
     char *res_str = (char *)malloc(((len_str * 4 / 3) + 4) * sizeof(char));
-    if (res_str == NULL)
-    {
-        // Memory allocation failed
+    if (res_str == NULL){
         return NULL;
     }
-
     int index, no_of_bits = 0, padding = 0, val = 0, count = 0, temp;
     int i, j, k = 0;
-
-    // Loop takes 3 characters at a time from input_str and stores it in val
-    for (i = 0; i < len_str; i += 3)
-    {
+    for (i = 0; i < len_str; i += 3){
         val = 0, count = 0, no_of_bits = 0;
-
-        for (j = i; j < len_str && j <= i + 2; j++)
-        {
-            // Binary data of input_str is stored in val
+        for (j = i; j < len_str && j <= i + 2; j++){
             val = val << 8;
-            // (A + 0 = A) stores character in val
             val = val | input_str[j];
-            // Calculates how many times the loop ran
             count++;
         }
-
         no_of_bits = count * 8;
-
-        // Calculates how many "=" to append after res_str
         padding = no_of_bits % 3;
-
-        // Extracts all bits from val (6 at a time) and finds the value of each block
         while (no_of_bits != 0)
         {
-            // Retrieve the value of each block
-            if (no_of_bits >= 6)
-            {
+            if (no_of_bits >= 6){
                 temp = no_of_bits - 6;
-                // Binary of 63 is (111111) f
                 index = (val >> temp) & 63;
                 no_of_bits -= 6;
             }
-            else
-            {
+            else{
                 temp = 6 - no_of_bits;
-                // Append zeros to the right if bits are less than 6
                 index = (val << temp) & 63;
                 no_of_bits = 0;
             }
             res_str[k++] = char_set[index];
         }
     }
-
-    // Padding is done here
-    for (i = 1; i <= padding; i++)
-    {
+    for (i = 1; i <= padding; i++){
         res_str[k++] = '=';
     }
-
     res_str[k] = '\0';
     return res_str;
 }
-int main()
-{
+int main(){
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<int> distribution_26(0, 25);
     uniform_int_distribution<int> distribution_3(0, 3);
-    // init var(s).
     string name;
     string webside;
     int passwardlength;
@@ -108,7 +66,6 @@ int main()
     int special_int;
     string reversable;
     int reversable_int;
-    // question
     cout << "Passward:>Welcome to the passward generater." << endl;
     cout << "Passward:>Please type your name:";
     cin >> name;
@@ -116,68 +73,46 @@ int main()
     cin >> webside;
     cout << "Passward:>Please type how long you want your passward:";
     cin >> passwardlength;
-    /*
-    while statement to detect t/f
-    */
-    while (true)
-    {
+    while (true){
         cout << "Passward:>Do you want to use CAPITALIZED letter? [yes/no]:";
         cin >> capitalized;
-        if (capitalized == "yes")
-        {
+        if (capitalized == "yes"){
             capitalized_int = 1;
             cout << "Passward:>Imput accepted as yes. "
                  << "Your imput is:" << capitalized;
             break;
         }
-        else if (capitalized == "no")
-        {
+        else if (capitalized == "no"){
             capitalized_int = 0;
             cout << "Passward:>Imput accepted as no. "
                  << "Your imput is:" << capitalized;
             break;
         }
-        else
-        {
+        else{
             cout << "Error:invalid input please try again.";
         }
     }
-    /*
-    end while statement
-    */
-    /*
-    while statement to detect t/f
-    */
     while (true)
     {
         cout << endl
              << "Passward:>Do you want special letters? [yes/no]:";
         cin >> special;
-        if (special == "yes")
-        {
+        if (special == "yes"){
             special_int = 1;
             cout << "Passward:>Imput accepted as yes. "
                  << "Your imput is:" << special;
             break;
         }
-        else if (special == "no")
-        {
+        else if (special == "no"){
             special_int = 0;
             cout << "Passward:>Imput accepted as no. "
                  << "Your imput is:" << special;
             break;
         }
-        else
-        {
+        else{
             cout << "Passward:>Error:invalid input please try again.";
         }
     }
-    /*
-    end while statement
-    */
-    /*
-    while statement to detect t/f
-    */
     while (true)
     {
         cout << endl
@@ -185,30 +120,23 @@ int main()
              << "Passward:>Warning:Choosing yes will ignore all settings." << endl
              << "Passward:>Yor input[yes/no]:";
         cin >> reversable;
-        if (reversable == "yes")
-        {
+        if (reversable == "yes"){
             reversable_int = 1;
             // set it to one when algerism is complete.
             cout << "Passward:>Imput accepted as yes."
                  << "Your imput is:" << reversable;
             break;
         }
-        else if (reversable == "no")
-        {
+        else if (reversable == "no"){
             reversable_int = 0;
             cout << "Passward:>Imput accepted as no."
                  << "Your imput is:" << reversable;
             break;
         }
-        else
-        {
+        else{
             cout << "Passward:>Error:invalid input please try again.";
         }
     }
-    /*
-    -----------------------------------------------------------------------------------------------------
-    question complete
-    */
     cout << endl
          << "Passward:>Start genrating......" << endl;
     if (reversable_int == 1)
@@ -216,45 +144,27 @@ int main()
         const char *sname = name.c_str();
         const char *surl = webside.c_str();
         char *combined_str = safeStrcat(sname, "@");
-        if (combined_str != NULL)
-        {
-            // Append the URL to the combined string
+        if (combined_str != NULL){
             combined_str = safeStrcat(combined_str, surl);
-
-            // Call the base64Encoder function
             char *encoded_str = base64Encoder(combined_str, strlen(combined_str));
-
-            if (encoded_str != NULL)
-            {
-                // Print the encoded string
+            if (encoded_str != NULL){
                 printf("Encoded string: %s\n", encoded_str);
-
-                // Free memory
                 free(encoded_str);
             }
-            else
-            {
+            else{
                 printf("Memory allocation failed for encoded string.\n");
             }
-
-            // Free memory for the combined string
             free(combined_str);
         }
-        else
-        {
+        else{
             printf("Memory allocation failed for combined string.\n");
         }
     }
-    else
-    {
-        if (special_int == 1)
-        {
-            if (capitalized_int == 1)
-            {
-                // TT
+    else{
+        if (special_int == 1){
+            if (capitalized_int == 1){
                 cout << "debug: specialcar=true, capitialized=ture" << endl;
-                if (passwardlength % 3 == 0)
-                {
+                if (passwardlength % 3 == 0){
                     char cch;
                     string ch;
                     for (int i = 1; i <= passwardlength / 3; ++i)
@@ -273,8 +183,7 @@ int main()
                 }
                 else
                 {
-                    if (passwardlength % 3 == 1)
-                    {
+                    if (passwardlength % 3 == 1){
                         char cch;
                         string ch;
                         passwardlength = passwardlength - 1;
@@ -294,8 +203,7 @@ int main()
                         cout << endl
                              << "Debug:EOF=1" << endl;
                     }
-                    else
-                    {
+                    else{
                         char cch;
                         string ch;
                         passwardlength = passwardlength - 2;
@@ -321,10 +229,8 @@ int main()
             }
             else
             {
-                // TF
                 cout << "debug: specialcar=true, capitialized=flase" << endl;
-                if (passwardlength % 2 == 0)
-                {
+                if (passwardlength % 2 == 0){
                     char cch;
                     string ch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
@@ -339,8 +245,7 @@ int main()
                     cout << endl
                          << "Debug:EOF=1" << endl;
                 }
-                else
-                {
+                else{
                     char cch;
                     string ch;
                     passwardlength = passwardlength - 1;
@@ -360,14 +265,11 @@ int main()
                 }
             }
         }
-        else
-        {
+        else{
             if (capitalized_int == 1)
             {
-                // FT
                 cout << "debug: specialcar=flase, capitialized=true" << endl;
-                if (passwardlength % 2 == 0)
-                {
+                if (passwardlength % 2 == 0){
                     char cch;
                     string ch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
@@ -382,8 +284,7 @@ int main()
                     cout << endl
                          << "Debug:EOF=1" << endl;
                 }
-                else
-                {
+                else{
                     char cch;
                     string ch;
                     passwardlength = passwardlength - 1;
@@ -402,9 +303,7 @@ int main()
                          << "Debug:EOF=1" << endl;
                 }
             }
-            else
-            {
-                // FF
+            else{
                 cout << "debug: specialcar=flase, capitialized=false" << endl;
                 char cch;
                 string ch;
