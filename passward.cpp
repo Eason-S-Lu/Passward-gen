@@ -219,11 +219,11 @@ question complete
                     unsigned seed= time(0);
                     srand(seed);
                     for (int i = 1; i <= passwardlength/3 ; ++i) {
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r_r()%26;
 	                ch=ch+cch;
-	                cch = '-' + rand()%4;
+	                cch = '-' + rand_r_r()%4;
 	                ch=ch+cch;
-	                cch = 'A' + rand()%26;
+	                cch = 'A' + rand_r_r()%26;
                     ch=ch+cch;
                 }
                 cout << endl << "Your passward is :" << ch << endl ;
@@ -238,14 +238,14 @@ question complete
                     unsigned seed= time(0);
                     srand(seed);
                     passwardlength=passwardlength-1;
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r_r()%26;
 	                ch=ch+cch;
                     for (int i = 1; i <= passwardlength/3 ; ++i) {
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch+cch;
-	                cch = '-' + rand()%4;
+	                cch = '-' + rand_r()%4;
 	                ch=ch+cch;
-	                cch = 'A' + rand()%26;
+	                cch = 'A' + rand_r()%26;
                     ch=ch+cch;
                     }
                    cout << endl << "Your passward is :" << ch << endl ;
@@ -258,16 +258,16 @@ question complete
                     unsigned seed= time(0);
                     srand(seed);
                      passwardlength=passwardlength-2;
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch + cch;
-                    cch = 'A' + rand()%26;
+                    cch = 'A' + rand_r()%26;
                     ch=ch + cch;
                     for (int i = 1; i <= passwardlength/3 ; ++i) {
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch + cch;
-	                cch = '-' + rand()%4;
+	                cch = '-' + rand_r()%4;
 	                ch=ch + cch;
-	                cch = 'A' + rand()%26;
+	                cch = 'A' + rand_r()%26;
                     ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
@@ -286,9 +286,9 @@ question complete
                     unsigned seed= time(0);
                     srand(seed);
                     for (int i = 1; i <= passwardlength/2 ; ++i) {
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch + cch;
-	                cch = '-' + rand()%4;
+	                cch = '-' + rand_r()%4;
 	                ch=ch + cch;
                     }
                    cout << endl << "Your passward is :" << ch << endl ;
@@ -301,12 +301,12 @@ question complete
                     unsigned seed= time(0);
                     srand(seed);
                      passwardlength=passwardlength-1;
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch + cch;
                     for (int i = 1; i <= passwardlength/2 ; ++i) {
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch + cch;
-	                cch = '-' + rand()%4;
+	                cch = '-' + rand_r()%4;
 	                ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
@@ -327,9 +327,9 @@ question complete
                     unsigned seed= time(0);
                     srand(seed);
                     for (int i = 1; i <= passwardlength/2 ; ++i) {
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch + cch;
-	                cch = 'A' + rand()%26;
+	                cch = 'A' + rand_r()%26;
 	                ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
@@ -342,12 +342,12 @@ question complete
                     unsigned seed= time(0);
                     srand(seed);
                      passwardlength=passwardlength-1;
-                    cch = 'A' + rand()%26;
+                    cch = 'A' + rand_r()%26;
 	                ch=ch + cch;
                     for (int i = 1; i <= passwardlength/2 ; ++i) {
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch + cch;
-	                cch = 'A' + rand()%26;
+	                cch = 'A' + rand_r()%26;
 	                ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
@@ -361,7 +361,7 @@ question complete
                 char cch;
                 string ch;
                  for (int i = 1; i <= passwardlength ; ++i) {
-                    cch = 'a' + rand()%26;
+                    cch = 'a' + rand_r()%26;
 	                ch=ch + cch;
                     }
                     cout << endl << "Your passward is :" << ch << endl ;
