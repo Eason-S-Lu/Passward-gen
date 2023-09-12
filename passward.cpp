@@ -397,7 +397,7 @@ int main()
                 cout << endl
                      << "Your passward is :" << ch << endl;
                 cout << endl
-                     << "Debug:EOF=1";
+                     << "Debug:EOF=1" << endl;
             }
         }
     }
