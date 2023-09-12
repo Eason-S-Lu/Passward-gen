@@ -17,41 +17,27 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        
-      - name: Check for C++ files
-        id: check_cpp_files
-        run: |
-          if [ -z "$(find . -name '*.cpp')" ]; then
-            echo "No C++ files found"
-            echo "{cpp_files}={false}" >> "$GITHUB_ENV"
-          else
-            echo "C++ files found"
-             echo "{cpp_files}={true}" >> "$GITHUB_ENV"
-          fi
           
       - name: Install C++ compilers
-        if: ${{env.cpp_files == 'true'}}
         run: |
           sudo apt install -y g++
+          sudo apt install -y clang
+          sudo apt install -y llvm
           
       - name: Compile C++ code (C++14)
-        if: ${{env.cpp_files == 'true'}}
-        run: g++ -std=c++14 -Wall -Wextra -Werror -pedantic -c *.cpp
+        run: g++ -std=c++14 -Wall -Wextra -Werror -pedantic -c password.cpp
         
       - name: Compile C++ code (C++17)
-        if: ${{env.cpp_files == 'true'}}
-        run: g++ -std=c++17 -Wall -Wextra -Werror -pedantic -c *.cpp
+        run: g++ -std=c++17 -Wall -Wextra -Werror -pedantic -c password.cpp
         
       - name: Compile C++ code (C++20)
-        if: ${{env.cpp_files == 'true'}}
-        run: g++ -std=c++20 -Wall -Wextra -Werror -pedantic -c *.cpp
+        run: g++ -std=c++20 -Wall -Wextra -Werror -pedantic -c password.cpp
         
       - name: Compile C++ code (C++23)
-        if: ${{env.cpp_files == 'true'}}
-        run: g++ -std=c++23 -Wall -Wextra -Werror -pedantic -c *.cpp
+        run: g++ -std=c++23 -Wall -Wextra -Werror -pedantic -c password.cpp
         
       - name: Upload build artifact
-        if: ${{env.cpp_files == 'true'}} && success()
+        if: success()
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
