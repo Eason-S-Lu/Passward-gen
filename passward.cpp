@@ -219,7 +219,7 @@ int main()
                         ch = ch + cch;
                     }
                     cout << endl
-                         << "Your passward is :" << ch << endl;
+                         << "  Your passward is :      " << ch << endl;
                     cout << endl
                          << "Debug:EOF=1" << endl;
                 }
@@ -243,7 +243,7 @@ int main()
                             ch = ch + cch;
                         }
                         cout << endl
-                             << "Your passward is :" << ch << endl;
+                             << "  Your passward is :      " << ch << endl;
                         cout << endl
                              << "Debug:EOF=1" << endl;
                     }
@@ -271,7 +271,7 @@ int main()
                             ch = ch + cch;
                         }
                         cout << endl
-                             << "Your passward is :" << ch << endl;
+                             << "  Your passward is :      " << ch << endl;
                         cout << endl
                              << "Debug:EOF=1" << endl;
                     }
@@ -295,7 +295,7 @@ int main()
                         ch = ch + cch;
                     }
                     cout << endl
-                         << "Your passward is :" << ch << endl;
+                         << "  Your passward is :      " << ch << endl;
                     cout << endl
                          << "Debug:EOF=1" << endl;
                 }
@@ -317,7 +317,7 @@ int main()
                         ch = ch + cch;
                     }
                     cout << endl
-                         << "Your passward is :" << ch << endl;
+                         << "  Your passward is :      " << ch << endl;
                     cout << endl
                          << "Debug:EOF=1" << endl;
                 }
@@ -343,7 +343,7 @@ int main()
                         ch = ch + cch;
                     }
                     cout << endl
-                         << "Your passward is :" << ch << endl;
+                         << "  Your passward is :      " << ch << endl;
                     cout << endl
                          << "Debug:EOF=1" << endl;
                 }
@@ -365,7 +365,7 @@ int main()
                         ch = ch + cch;
                     }
                     cout << endl
-                         << "Your passward is :" << ch << endl;
+                         << "  Your passward is :      " << ch << endl;
                     cout << endl
                          << "Debug:EOF=1" << endl;
                 }
@@ -383,7 +383,7 @@ int main()
                     ch = ch + cch;
                 }
                 cout << endl
-                     << "Your passward is :" << ch << endl;
+                     << "  Your passward is :      " << ch << endl;
                 cout << endl
                      << "Debug:EOF=1" << endl;
             }
