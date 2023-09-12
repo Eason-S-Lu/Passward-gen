@@ -71,6 +71,8 @@ int main()
 {
     random_device rd;
     mt19937 gen(rd());
+    uniform_int_distribution<int> distribution_26(0, 25);
+    uniform_int_distribution<int> distribution_3(0, 3);
     // init var(s).
     string name;
     string webside;
@@ -209,14 +211,11 @@ int main()
                     string ch;
                     for (int i = 1; i <= passwardlength / 3; ++i)
                     {
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'a' + distribution(gen);
+                        cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-                        uniform_int_distribution<int> distribution(0, 3);
-                        cch = '-' + distribution(gen);
+                        cch = '-' + distribution_3(gen);
                         ch = ch + cch;
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'A' + distribution(gen);
+                        cch = 'A' + distribution_26(gen);
                         ch = ch + cch;
                     }
                     cout << endl
@@ -231,19 +230,16 @@ int main()
                         char cch;
                         string ch;
                         passwardlength = passwardlength - 1;
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'a' + distribution(gen);
+                        cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
                         for (int i = 1; i <= passwardlength / 3; ++i)
                         {
-                            uniform_int_distribution<int> distribution(0, 25);
-                            cch = 'a' + distribution(gen);
+                            cch = 'a' + distribution_26(gen);
                             ch = ch + cch;
-                            uniform_int_distribution<int> distribution(0, 3);
-                            cch = '-' + distribution(gen);
+                            cch = '-' + distribution_3(gen);
                             ch = ch + cch;
-                            uniform_int_distribution<int> distribution(0, 25);
-                            cch = 'A' + distribution(gen);
+
+                            cch = 'A' + distribution_26(gen);
                             ch = ch + cch;
                         }
                         cout << endl
@@ -256,22 +252,22 @@ int main()
                         char cch;
                         string ch;
                         passwardlength = passwardlength - 2;
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'a' + distribution(gen);
+
+                        cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'A' + distribution(gen);
+
+                        cch = 'A' + distribution_26(gen);
                         ch = ch + cch;
                         for (int i = 1; i <= passwardlength / 3; ++i)
                         {
-                            uniform_int_distribution<int> distribution(0, 25);
-                            cch = 'a' + distribution(gen);
+
+                            cch = 'a' + distribution_26(gen);
                             ch = ch + cch;
-                            uniform_int_distribution<int> distribution(0, 3);
-                            cch = '-' + distribution(gen);
+
+                            cch = '-' + distribution_3(gen);
                             ch = ch + cch;
-                            uniform_int_distribution<int> distribution(0, 25);
-                            cch = 'A' + distribution(gen);
+
+                            cch = 'A' + distribution_26(gen);
                             ch = ch + cch;
                         }
                         cout << endl
@@ -291,11 +287,11 @@ int main()
                     string ch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'a' + distribution(gen);
+
+                        cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-                        uniform_int_distribution<int> distribution(0, 3);
-                        cch = '-' + distribution(gen);
+
+                        cch = '-' + distribution_3(gen);
                         ch = ch + cch;
                     }
                     cout << endl
@@ -308,16 +304,16 @@ int main()
                     char cch;
                     string ch;
                     passwardlength = passwardlength - 1;
-                    uniform_int_distribution<int> distribution(0, 25);
-                    cch = 'a' + distribution(gen);
+
+                    cch = 'a' + distribution_26(gen);
                     ch = ch + cch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'a' + distribution(gen);
+
+                        cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-                        uniform_int_distribution<int> distribution(0, 3);
-                        cch = '-' + distribution(gen);
+
+                        cch = '-' + distribution_3(gen);
                         ch = ch + cch;
                     }
                     cout << endl
@@ -339,11 +335,11 @@ int main()
                     string ch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'a' + distribution(gen);
+
+                        cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'A' + distribution(gen);
+
+                        cch = 'A' + distribution_26(gen);
                         ch = ch + cch;
                     }
                     cout << endl
@@ -356,16 +352,16 @@ int main()
                     char cch;
                     string ch;
                     passwardlength = passwardlength - 1;
-                    uniform_int_distribution<int> distribution(0, 25);
-                    cch = 'A' + distribution(gen);
+
+                    cch = 'A' + distribution_26(gen);
                     ch = ch + cch;
                     for (int i = 1; i <= passwardlength / 2; ++i)
                     {
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'a' + distribution(gen);
+
+                        cch = 'a' + distribution_26(gen);
                         ch = ch + cch;
-                        uniform_int_distribution<int> distribution(0, 25);
-                        cch = 'A' + distribution(gen);
+
+                        cch = 'A' + distribution_26(gen);
                         ch = ch + cch;
                     }
                     cout << endl
@@ -382,8 +378,8 @@ int main()
                 string ch;
                 for (int i = 1; i <= passwardlength; ++i)
                 {
-                    uniform_int_distribution<int> distribution(0, 25);
-                    cch = 'a' + distribution(gen);
+
+                    cch = 'a' + distribution_26(gen);
                     ch = ch + cch;
                 }
                 cout << endl
