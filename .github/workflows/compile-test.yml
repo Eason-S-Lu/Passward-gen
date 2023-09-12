@@ -24,6 +24,16 @@ jobs:
           sudo apt install -y clang
           sudo apt install -y llvm
           
+      - name: Compile C++ code (C++03)
+        run: |
+          g++ -std=c++03 -Wall -Wextra -Werror -pedantic -c password.cpp -o gcc03
+          clang++ -std=c++03 -Wall -Wextra -Werror -pedantic -c password.cpp -o clang03
+          
+      - name: Compile C++ code (C++11)
+        run: |
+          g++ -std=c++11 -Wall -Wextra -Werror -pedantic -c password.cpp -o gcc11
+          clang++ -std=c++11 -Wall -Wextra -Werror -pedantic -c password.cpp -o clang11
+          
       - name: Compile C++ code (C++14)
         run: |
           g++ -std=c++14 -Wall -Wextra -Werror -pedantic -c password.cpp -o gcc14
@@ -42,7 +52,7 @@ jobs:
       - name: Compile C++ code (C++23)
         run: |
           g++ -std=c++23 -Wall -Wextra -Werror -pedantic -c password.cpp -o gcc23
-          clang++ -std=c++23 -Wall -Wextra -Werror -pedantic -c password.cpp -o clang23
+          clng++ -std=c++2b -Wall -Wextra -Werror -pedantic -c password.cpp -o clang23
         
       - name: Upload build artifact
         if: success()
