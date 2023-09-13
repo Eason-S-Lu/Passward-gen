@@ -3,13 +3,13 @@ name: C++ compile tester
 on:
   pull_request:
     branches:
-      - main
+      - '*'
   push:
     branches:
-      - main
+      - '*'
   release:
     branches:
-      - main
+      - '*'
 
 jobs:
   build:
